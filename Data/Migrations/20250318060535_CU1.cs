@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace TWVancouver.Data.Migrations
+namespace TicketWave.Data.Migrations
 {
     /// <inheritdoc />
     public partial class CU1 : Migration

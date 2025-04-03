@@ -16,6 +16,9 @@ namespace TicketWave.Data
         
         public DbSet<EventTickets> EventTickets { get; set; }  // Ensure your model is added here
 
+        public DbSet<EventListing> EventListings { get; set; } 
+
+
 
     }
 }

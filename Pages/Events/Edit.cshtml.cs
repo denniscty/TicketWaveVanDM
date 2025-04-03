@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using TicketWave.Data;
 using TicketWave.Models;
 
-namespace TicketWave.Pages_Events
+namespace TicketWave.Pages.Events
 {
     public class EditModel : PageModel
     {

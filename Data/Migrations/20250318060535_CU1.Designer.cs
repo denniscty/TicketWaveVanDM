@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TWVancouver.Data;
+using TicketWave.Data;
 
 #nullable disable
 
-namespace TWVancouver.Data.Migrations
+namespace TicketWave.Data.Migrations
 {
     [DbContext(typeof(TicketWaveContext))]
     [Migration("20250318060535_CU1")]
@@ -227,7 +227,7 @@ namespace TWVancouver.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("TicketWaveVan.Models.EventListing", b =>
+            modelBuilder.Entity("TicketWave.Models.EventListing", b =>
                 {
                     b.Property<int>("EventListingID")
                         .ValueGeneratedOnAdd()
@@ -278,7 +278,7 @@ namespace TWVancouver.Data.Migrations
                     b.ToTable("EventListing");
                 });
 
-            modelBuilder.Entity("TicketWaveVan.Models.Review", b =>
+            modelBuilder.Entity("TicketWave.Models.Review", b =>
                 {
                     b.Property<int>("ReviewID")
                         .ValueGeneratedOnAdd()
@@ -360,16 +360,16 @@ namespace TWVancouver.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TicketWaveVan.Models.Review", b =>
+            modelBuilder.Entity("TicketWave.Models.Review", b =>
                 {
-                    b.HasOne("TicketWaveVan.Models.EventListing", null)
+                    b.HasOne("TicketWave.Models.EventListing", null)
                         .WithMany("Reviews")
                         .HasForeignKey("EventListingID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TicketWaveVan.Models.EventListing", b =>
+            modelBuilder.Entity("TicketWave.Models.EventListing", b =>
                 {
                     b.Navigation("Reviews");
                 });

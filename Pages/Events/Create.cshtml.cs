@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using TicketWave.Data;
 using TicketWave.Models;
 
-namespace TicketWave.Pages_Events
+namespace TicketWave.Pages.Events
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace TicketWave.Pages_Events
         }
 
         [BindProperty]
-        public EventTickets EventTickets { get; set; } = default!;
+        public EventTickets EventTickets { get; set; } = new EventTickets();
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

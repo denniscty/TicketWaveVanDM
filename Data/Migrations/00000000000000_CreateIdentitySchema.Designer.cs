@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TWVancouver.Data;
+using TicketWave.Data;
 
-namespace TWVancouver.Data.Migrations
+namespace TicketWave.Data.Migrations
 {
     [DbContext(typeof(TicketWaveContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
